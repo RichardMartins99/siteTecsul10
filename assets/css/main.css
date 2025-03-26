@@ -1772,6 +1772,10 @@ input, select, textarea {
 			text-align: inherit;
 		}
 
+		header > h3 {
+			text-align: center;
+		}
+
 	footer {
 		margin: 2.5em 0 0 0;
 	}
