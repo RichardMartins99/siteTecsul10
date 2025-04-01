@@ -15,6 +15,21 @@
 					</ul>
 				</nav>
 			</div>
+
+			<!-- Modal -->
+			<button id="abrirModal" class="botao">Abrir Modal</button>
+
+			<div id="meuModal" class="modal">
+				<div class="modal-conteudo">
+					<div class="modal-cabecalho">
+						<h2 id="txtTitulo" class="modal-titulo"></h2>
+						<span class="fechar">&times;</span>
+					</div>
+					<div class="modal-corpo">
+						<p id="txtModal"></p>
+					</div>
+				</div>
+			</div>
 			<!-- Carousel -->
 				<section class="carousel">
 					<header>
@@ -22,9 +37,9 @@
 					</header>
 					<div class="reel">
 						<article>
-							<a href="#" class="image featured"><img src="images/solucaoAmbiental/aeradores.jpg" height="400px" alt="Aeradores superficiais" /></a>
+							<a onclick="abrirModal(0)" class="image featured"><img src="images/solucaoAmbiental/aeradores.jpg" height="400px" alt="Aeradores superficiais" /></a>
 							<header>
-								<h4><a href="#">Aeradores superficiais</a></h4>
+								<h4><a onclick="abrirModal(0)">Aeradores superficiais</a></h4>
 							</header>
 						</article>
 
@@ -264,5 +279,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="site.js"></script>
 	</body>
 </html>
