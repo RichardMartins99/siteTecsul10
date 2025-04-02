@@ -17,8 +17,6 @@
 			</div>
 
 			<!-- Modal -->
-			<button id="abrirModal" class="botao">Abrir Modal</button>
-
 			<div id="meuModal" class="modal">
 				<div class="modal-conteudo">
 					<div class="modal-cabecalho">
@@ -26,7 +24,7 @@
 						<span class="fechar">&times;</span>
 					</div>
 					<div class="modal-corpo">
-						<p id="txtModal"></p>
+						<div id="txtModal"></div>
 					</div>
 				</div>
 			</div>
@@ -44,37 +42,37 @@
 						</article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/solucaoAmbiental/tratamento_esgoto_sanitario.jpg" height="400px" alt="Tratamento de esgoto sanitário" /></a>
+							<a onclick="abrirModal(1)" class="image featured"><img src="images/solucaoAmbiental/tratamento_esgoto_sanitario.jpg" height="400px" alt="Tratamento de esgoto sanitário" /></a>
 							<header>
-								<h4><a href="#">Tratamento de esgoto sanitário</a></h4>
+								<h4><a onclick="abrirModal(1)">Tratamento de esgoto sanitário</a></h4>
 							</header>
 						</article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/solucaoAmbiental/tratamento_agua.jpg" height="400px" alt="Tratamento de água" /></a>
+							<a onclick="abrirModal(2)" class="image featured"><img src="images/solucaoAmbiental/tratamento_agua.jpg" height="400px" alt="Tratamento de água" /></a>
 							<header>
-								<h4><a href="#">Tratamento de água</a></h4>
+								<h4><a onclick="abrirModal(2)">Tratamento de água</a></h4>
 							</header>
 						</article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/solucaoAmbiental/tratamento_efluentes.jpg" height="400px" alt="" /></a>
+							<a onclick="abrirModal(3)" class="image featured"><img src="images/solucaoAmbiental/tratamento_efluentes.jpg" height="400px" alt="" /></a>
 							<header>
-								<h4><a href="#">Tratamento de efluentes</a></h4>
+								<h4><a onclick="abrirModal(3)">Tratamento de efluentes</a></h4>
 							</header>
 						</article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/solucaoAmbiental/separador_oleo.jpg" height="400px" alt="Separador de água e óleo" /></a>
+							<a onclick="abrirModal(4)" class="image featured"><img src="images/solucaoAmbiental/separador_oleo.jpg" height="400px" alt="Separador de água e óleo" /></a>
 							<header>
-								<h4><a href="#">Separador de água e óleo</a></h4>
+								<h4><a onclick="abrirModal(4)">Separador de água e óleo</a></h4>
 							</header>
 						</article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/solucaoAmbiental/insumos.jpg" height="400px" alt="Insumos" /></a>
+							<a onclick="abrirModal(5)" class="image featured"><img src="images/solucaoAmbiental/insumos.jpg" height="400px" alt="Insumos" /></a>
 							<header>
-								<h4><a href="#">Insumos</a></h4>
+								<h4><a onclick="abrirModal(5)">Insumos</a></h4>
 							</header>
 						</article>
 					</div>
@@ -88,70 +86,100 @@
 						<article>
 							<a href="#" class="image featured"><img src="images/maquinas/aries_wd240.jpg" height="400px" alt="Máquina automotiva Aries WD 240" /></a>
 							<header>
-								<h4><a href="#">Aries WD 240</a></h4>
+								<div>
+									<h4><a href="#">Aries WD 240</a></h4>
+									<P>Automóvel</P>
+								</div>
 							</header>
 						</article>
 
 						<article>
 							<a href="#" class="image featured"><img src="images/maquinas/aries2.jpg" height="400px" alt="" /></a>
 							<header>
-								<h4><a href="#">Aries 2.0</a></h4>
+								<div>
+									<h4><a href="#">Aries 2.0</a></h4>
+									<P>Automóvel</P>
+								</div>
 							</header>
 						</article>
 
 						<article>
 							<a href="#" class="image featured"><img src="images/maquinas/taurus.jpg" height="400px" alt="" /></a>
 							<header>
-								<h4><a href="#">Taurus</a></h4>
+								<div>
+									<h4><a href="#">Taurus</a></h4>
+									<P>Automóvel</P>
+								</div>
 							</header>
 						</article>
 
 						<article>
 							<a href="#" class="image featured"><img src="images/maquinas/cl200_phoenix.jpg" height="400px"alt="" /></a>
 							<header>
-								<h4><a href="#">CL 200 - Phoenix</a></h4>
-							</header>
-						</article>
-
-						<article>
-							<a href="#" class="image featured"><img src="images/maquinas/roll_wash.jpg"  height="400px"alt="" /></a>
-							<header>
-								<h4><a href="#">Roll wash</a></h4>
-							</header>
-						</article>
-
-						<article>
-							<a href="#" class="image featured"><img src="images/maquinas/new_efl.jpg" height="400px" alt="" /></a>
-							<header>
-								<h4><a href="#">New EFL</a></h4>
+								<div>
+									<h4><a href="#">CL 200 - Phoenix</a></h4>
+									<P>Automóvel</P>
+								</div>
 							</header>
 						</article>
 
 						<article>
 							<a href="#" class="image featured"><img src="images/maquinas/new_lfc.jpg" height="400px" alt="" /></a>
 							<header>
-								<h4><a href="#">New LFC</a></h4>
+								<div>
+									<h4><a href="#">New LFC</a></h4>
+									<p>Ônibus</p>
+								</div>
 							</header>
 						</article>
 
 						<article>
 							<a href="#" class="image featured"><img src="images/maquinas/new_lfo.jpg" height="400px" alt="" /></a>
 							<header>
-								<h4><a href="#">New LFO</a></h4>
+								<div>
+									<h4><a href="#">New LFO</a></h4>
+									<p>Ônibus</p>
+								</div>
 							</header>
 						</article>
 
 						<article>
 							<a href="#" class="image featured"><img src="images/pic04.jpg" height="400px" alt="" /></a>
 							<header>
-								<h4><a href="#">LTM</a></h4>
+								<div>
+									<h4><a href="#">LTM</a></h4>
+									<p>Ônibus</p>
+								</div>
+							</header>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="images/maquinas/roll_wash.jpg"  height="400px"alt="" /></a>
+							<header>
+								<div>
+									<h4><a href="#">Roll wash</a></h4>
+									<p>Caminhão e ônibus</p>
+								</div>
+							</header>
+						</article>
+						
+						<article>
+							<a href="#" class="image featured"><img src="images/maquinas/new_efl.jpg" height="400px" alt="" /></a>
+							<header>
+								<div>
+									<h4><a href="#">New EFL</a></h4>
+									<p>Caminhão e ônibus</p>
+								</div>
 							</header>
 						</article>
 
 						<article>
 							<a href="#" class="image featured"><img src="images/maquinas/lcm.jpg" height="400px" alt="" /></a>
 							<header>
-								<h4><a href="#">LCM</a></h4>
+								<div>
+									<h4><a href="#">LCM</a></h4>
+									<p>Caminhão e ônibus</p>
+								</div>
 							</header>
 						</article>					
 
@@ -188,49 +216,70 @@
 
 				<section class="carousel">
 					<header>
-						<h3>Segurança do trabalho</h3>
+						<h3>Treinamento em normas regulamentadoras de segurança do trabalho</h3>
 					</header>
 					<div class="reel">
 
 						<article>
-							<a href="#" class="image featured"><img src="images/pic01.jpg" height="400px" alt="" /></a>
+							<a href="#" class="image featured"><img src="images/segurancaTrabalho/nr10.jpg" height="350px" alt="" /></a>
 							<header>
 								<h3><a href="#">NR10</a></h3>
 							</header>
 						</article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/pic02.jpg" height="400px" alt="" /></a>
+							<a href="#" class="image featured"><img src="images/segurancaTrabalho/nr10_sep.jpg" height="350px" alt="" /></a>
 							<header>
 								<h3><a href="#">NR10 SEP</a></h3>
 							</header>
 						</article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/pic03.jpg" height="400px" alt="" /></a>
+							<a href="#" class="image featured"><img src="images/segurancaTrabalho/nr35.jpg" height="350px" alt="" /></a>
 							<header>
 								<h3><a href="#">NR35</a></h3>
 							</header>
 						</article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/pic04.jpg" height="400px" alt="" /></a>
+							<a href="#" class="image featured"><img src="images/segurancaTrabalho/nr11.jpg" height="350px" alt="" /></a>
 							<header>
 								<h3><a href="#">NR11</a></h3>
 							</header>
 						</article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/pic05.jpg" height="400px" alt="" /></a>
+							<a href="#" class="image featured"><img src="images/segurancaTrabalho/nr6.jpg" height="350px" alt="" /></a>
 							<header>
 								<h3><a href="#">NR6</a></h3>
 							</header>
 						</article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/pic01.jpg" height="400px" alt="" /></a>
+							<a href="#" class="image featured"><img src="images/segurancaTrabalho/nr12.jpg" height="350px" alt="" /></a>
 							<header>
 								<h3><a href="#">NR12</a></h3>
+							</header>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="images/segurancaTrabalho/nr33.jpg" height="350px" alt="" /></a>
+							<header>
+								<h3><a href="#">NR33</a></h3>
+							</header>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="images/segurancaTrabalho/nr20.jpg" height="350px" alt="" /></a>
+							<header>
+								<h3><a href="#">NR20</a></h3>
+							</header>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="images/segurancaTrabalho/nr18.jpg" height="350px" alt="" /></a>
+							<header>
+								<h3><a href="#">NR18</a></h3>
 							</header>
 						</article>
 

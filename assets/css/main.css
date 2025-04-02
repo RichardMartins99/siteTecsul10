@@ -74,6 +74,10 @@ input, select, textarea {
 
 /* Basic */
 
+	#txtModal p {
+		text-indent: 30px;
+	}
+
 	html {
 		box-sizing: border-box;
 	}
@@ -1764,12 +1768,8 @@ input, select, textarea {
 		margin: 0 0 1em 0;
 	}
 
-		header > p {
-			display: block;
-			font-size: 1.5em;
-			margin: 1em 0 2em 0;
-			line-height: 1.5em;
-			text-align: inherit;
+		header > div > p {
+			font-size: smaller;
 		}
 
 		header > h3 {
@@ -2249,6 +2249,8 @@ input, select, textarea {
 			margin: 1em 0 0 0;
 		}
 
+
+
 	body.homepage #header {
 		height: 10vh;
 	}
@@ -2298,12 +2300,15 @@ input, select, textarea {
 
 	.modal-conteudo {
 		background-color: #fefefe;
-		margin: 10% auto;
+		margin: 5% auto;
 		border-radius: 8px;
 		width: 80%;
 		max-width: 600px;
+		max-height: 80vh;
 		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 		animation: animacaoModal 0.3s;
+		display: flex;
+		flex-direction: column;
 	}
 
 	.modal-cabecalho {
@@ -2325,7 +2330,11 @@ input, select, textarea {
 	.modal-corpo {
 		padding: 20px;
 		border-bottom: 1px solid #ddd;
+		border-top: 1px solid #ddd;
 		line-height: 1.6;
+		overflow-y: auto;
+		max-height: 60vh;
+		flex-grow: 1;
 	}
 
 	.fechar {
