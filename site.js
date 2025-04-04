@@ -37,8 +37,11 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
+
     document.querySelectorAll(".carousel").forEach(ajustarDuracao);
+
+    //Email js
+    
 });
 
 function ajustarDuracao(carousel) {

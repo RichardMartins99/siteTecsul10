@@ -544,6 +544,21 @@
 
 								<!-- Contact -->
 									<section class="contact">
+										<h2>Fale com a gente</h2>
+
+										<form id="form-contato">
+										  <label for="from_name" style="color: white;">Seu nome:</label>
+										  <input type="text" name="from_name" required>
+									  
+										  <label for="from_email" style="color: white;">Seu e-mail:</label>
+										  <input type="email" name="from_email" required>
+									  
+										  <label for="message" style="color: white;">Mensagem:</label>
+										  <textarea name="message" rows="5" required></textarea>
+									  
+										  <button type="submit">Enviar</button>
+										</form>
+
 										<header>
 											<h3>Nisl turpis nascetur interdum?</h3>
 										</header>
@@ -578,5 +593,26 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="site.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+			<!-- Adicionar este script em um arquivo separado -->
+			<script>
+				emailjs.init("T5TI_85-Ep5oksyHQ");
+
+				const form = document.getElementById("form-contato");
+
+				form.addEventListener("submit", function(event) {
+				event.preventDefault();
+
+				emailjs.sendForm("service_6pwqb9e", "template_58uh56s", this)
+					.then(function() {
+					alert("Mensagem enviada com sucesso!"); //Criar um toastr para mensagem
+					form.reset();
+					}, function(error) {
+					console.error("Erro:", error);
+					alert("Ocorreu um erro. Tente novamente.");
+					});
+				});
+			</script>
 	</body>
 </html>
