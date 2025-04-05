@@ -133,6 +133,22 @@ function configModal(idModal){
                     <p>Os produtos são essenciais para otimizar a remoção de impurezas e garantir a qualidade do tratamento de água e efluentes.</p>`;
             img = '';
             break;
+
+        case 6:
+            tittle = 'Aries WD 240';
+            txt = `<p> O Aries WD 240 é uma solução de ótimo custo-benefício para lavagem de veículos, ideal para concessionárias, postos e locais com demanda por serviços de qualidade. É um equipamento de baixo investimento, alta rentabilidade e fácil uso e manutenção, projetado para alta demanda. Suas escovas de EVA proporcionam maciez e brilho, e o sistema oferece flexibilidade de configuração e baixo custo operacional. Pode ser equipado com diversos acessórios, adaptando-se às necessidades do cliente.
+                    </p>
+                    <h4><strong>Materiais Filtrantes:</strong></h4>  
+                    <ul>
+                        <li><strong>Alimentação elétrica:</strong>  220/380V – 50/60Hz</li>
+                        <li><strong>Potência instalada:</strong> de 7,5 kW (básico) até 12,8 kW (completo)</li>
+                        <li><strong>Consumo de água por ciclo: </strong>  90 a 120 litros</li>
+                        <li><strong>Consumo de shampoo/cera por lavagem:</strong>  30-40 ml / 50-60 ml</li>
+                        <li><strong>Tempo de lavagem:</strong>  aprox. 2 min e 15 s</li>
+                    </ul>
+                    <p>Oferece alta confiabilidade e uma excelente relação qualidade/preço.</p>`;
+            img = '';
+            break;
     }
 
     document.getElementById('txtTitulo').textContent = tittle;

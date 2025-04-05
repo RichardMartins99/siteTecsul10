@@ -91,7 +91,7 @@ input, select, textarea {
 		color: #5b5b5b;
 		font-size: 15pt;
 		line-height: 1.85em;
-		font-family: 'Source Sans Pro', sans-serif;
+		font-family: 'Arial', sans-serif;
 		font-weight: 300;
 	}
 
@@ -2610,7 +2610,7 @@ input, select, textarea {
 		margin-bottom: 0;
 	}
 
-		.carousel .forward, .carousel .backward {
+		.carousel .backward {
 			position: absolute;
 			top: 50%;
 			width: 6em;
@@ -2619,7 +2619,7 @@ input, select, textarea {
 			cursor: pointer;
 		}
 
-			.carousel .forward:before, .carousel .backward:before {
+			.carousel .backward:before {
 				content: '';
 				display: block;
 				width: 6em;
@@ -2637,7 +2637,7 @@ input, select, textarea {
 				-webkit-backface-visibility: hidden;
 			}
 
-			.carousel .forward:after, .carousel .backward:after {
+			.carousel .backward:after {
 				content: '';
 				width: 3em;
 				height: 3em;
@@ -2647,20 +2647,8 @@ input, select, textarea {
 				background: url("images/arrow.svg") no-repeat center center;
 			}
 
-			.carousel .forward:hover:before, .carousel .backward:hover:before {
+			.carousel .backward:hover:before {
 				background-color: #84b6f4;
-			}
-
-		.carousel .forward {
-			right: 0;
-		}
-
-			.carousel .forward:before {
-				right: -3em;
-			}
-
-			.carousel .forward:after {
-				right: -0.25em;
 			}
 
 		.carousel .backward {
@@ -2683,7 +2671,7 @@ input, select, textarea {
 				display: flex;
 				width: max-content;
 				animation: scroll 10s linear infinite;
-				animation-delay: 5s;
+				animation-delay: 3s;
 			}
 
 		.carousel article {
@@ -2730,9 +2718,13 @@ input, select, textarea {
 			}
 
 			@keyframes scroll {
-				0% { transform: translateX(0); }
-				100% { transform: translateX(-50%); }
-			}
+				from {
+				  transform: translateX(0);
+				}
+				to {
+				  transform: translateX(-50%);
+				}
+			  }
 			
 
 /* Wide */

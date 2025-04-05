@@ -1,9 +1,3 @@
-/*
-	Helios by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 (function($) {
 
 	var	$window = $(window),
@@ -79,7 +73,6 @@
 		$('.carousel').each(function() {
 
 			var	$t = $(this),
-				$forward = $('<span class="forward"></span>'),
 				$backward = $('<span class="backward"></span>'),
 				$reel = $t.children('.reel'),
 				$items = $reel.children('article');
@@ -135,27 +128,6 @@
 
 				$t._updatePos = function() { $reel.css('transform', 'translate(' + pos + 'px, 0)'); };
 
-			// Forward.
-				$forward
-					.appendTo($t)
-					.hide()
-					.mouseenter(function(e) {
-						timerId = window.setInterval(function() {
-							pos -= settings.carousels.speed;
-
-							if (pos <= rightLimit)
-							{
-								window.clearInterval(timerId);
-								pos = rightLimit;
-							}
-
-							$t._updatePos();
-						}, 10);
-					})
-					.mouseleave(function(e) {
-						window.clearInterval(timerId);
-					});
-
 			// Backward.
 				$backward
 					.appendTo($t)
@@ -189,7 +161,6 @@
 							.css('overflow-y', 'hidden')
 							.css('overflow-x', 'scroll')
 							.scrollLeft(0);
-						$forward.hide();
 						$backward.hide();
 
 					}
@@ -198,7 +169,6 @@
 						$reel
 							.css('overflow', 'visible')
 							.scrollLeft(0);
-						$forward.show();
 						$backward.show();
 
 					}
