@@ -72,6 +72,7 @@ function configModal(idModal){
     let txt, img, tittle;
 
     switch (idModal){
+        //Soluções ambientais
         case 0:
             tittle = 'Aeradores superficiais';
             txt = `<p> O aerador de alta rotação funciona de maneira inversa aos aeradores convencionais, impulsionando o ar para dentro da água em vez de dispersá-lo na atmosfera.</p>
@@ -134,6 +135,7 @@ function configModal(idModal){
             img = '';
             break;
 
+        //Máquinas de lavagem automotiva
         case 6:
             tittle = 'Aries WD 240';
             txt = `<p> O Aries WD 240 é uma solução de ótimo custo-benefício para lavagem de veículos, ideal para concessionárias, postos e locais com demanda por serviços de qualidade. É um equipamento de baixo investimento, alta rentabilidade e fácil uso e manutenção, projetado para alta demanda. Suas escovas de EVA proporcionam maciez e brilho, e o sistema oferece flexibilidade de configuração e baixo custo operacional. Pode ser equipado com diversos acessórios, adaptando-se às necessidades do cliente.
@@ -149,8 +151,109 @@ function configModal(idModal){
                     <p>Oferece alta confiabilidade e uma excelente relação qualidade/preço.</p>`;
             img = '';
             break;
+
+        case 7:
+            tittle = 'Aries 2.0';
+            txt = `<p>É um equipamento de lavagem veicular que oferece rápido retorno sobre o investimento, combinando robustez, eficiência e baixo custo operacional. É ideal para serviços básicos, sendo versátil e configurável com diversos opcionais como escova horizontal eletrônica, lava rodas e acionamento por ticket. Possui alta rentabilidade, baixo consumo de recursos, controle por PLC, conectividade, e conta com sistemas avançados de escovas e secadores.</p>`;
+            img = '';
+            break;
+
+        case 8:
+            tittle = 'Taurus';
+            txt = `<p>Taurus oferece a melhor relação custo-benefício, unindo robustez, tecnologia nacional e eficiência operacional com baixo consumo de energia. Possui alta conectividade via PLC com 7 inversores e até 12 programas de lavagem configuráveis. É um equipamento versátil, com opcionais como secadores laterais, lava rodas, robowash e bomba HP onboard. Destaca-se pela alta rentabilidade, baixo consumo de recursos e capacidade de aplicar até 4 tipos de produtos.</p>`;
+            img = '';
+            break;
+
+        case 9:
+            tittle = 'CL 200 - Phoenix';
+            txt = `<p>O CL200 Phoenix é uma máquina de lavagem de automóveis premium, que combina desempenho excepcional, design atrativo e alto nível de automação. Ideal para locadoras, concessionárias e lavadoras que buscam eficiência e qualidade, oferece escovas Carlite, consumo reduzido, secagem avançada com quatro ventiladores, alta pressão, bomba HP e aplicação de até 4 produtos. Com funcionalidades de alto nível, é uma escolha versátil e acessível, indicada também para modelos de autoatendimento, destacando-se pelo visual moderno com LEDs e blindagens metálicas.</p>`;
+            img = '';
+            break;
+
+        case 10:
+            tittle = 'New LFC';
+            txt = `<p>O NLFC é um equipamento fixo e compacto para lavagem de ônibus, ideal para frotas médias e grandes. Disponível nas versões com 5 ou 7 escovas, oferece excelente custo-benefício, baixa manutenção e estrutura resistente em aço zincado. Conta com automação por PLC, acionamento por fotocélula e produtividade de até 30 veículos por hora. Com baixo consumo de recursos e programas inteligentes, permite lavagem automatizada sem necessidade de mão de obra.</p>`;
+            img = '';
+            break;
+
+        case 11:
+            tittle = 'New LFO';
+            txt = `<p>O NLFO é um equipamento fixo de alta performance para lavagem de grandes frotas de ônibus, disponível nas versões com 4 a 7 escovas. Com estrutura robusta em aço zincado a calor e colunas interligadas, oferece alta resistência e durabilidade. Possui automação por PLC, acionamento por fotocélula e escovas auxiliares com rotação inversa para limpeza eficiente. Com capacidade para lavar até 60 veículos por hora, proporciona baixo consumo de recursos e operação totalmente automatizada, sem necessidade de mão de obra.</p>`;
+            img = '';
+            break;
+
+        case 12:
+            tittle = 'New LTM';
+            txt = `<p>O LTM é um equipamento móvel para lavagem de ônibus, que combina funcionalidade, robustez e agilidade. Com estrutura zincada a calor e controle por PLC, desliza sobre trilhos com sistema duplo de tração e inversor de frequência. Ideal para locais com pouco espaço de manobra, possui 3 escovas, baixa manutenção, consumo reduzido e capacidade para lavar até 8 veículos por hora.</p>`;
+            img = '';
+            break;
+
+        case 13:
+            tittle = 'Roll Wash';
+            txt = `<p>Equipamento móvel manual para lavagem de ônibus de até 4,10m de altura, com 1 escova e estrutura em poste com braço articulado zincado a calor. Ideal para frotas pequenas e espaços reduzidos, oferece baixa manutenção, proteção ao operador com lona antirrespingo e produtividade de cerca de 6 veículos por hora.</p>`;
+            img = '';
+            break;
+
+        case 14:
+            tittle = 'New EFL';
+            txt = `<p>O EFL é um equipamento fixo para lavagem de ônibus, ideal para empresas com menor demanda. Disponível nas versões com 3 ou 5 escovas, possui estrutura zincada a calor, acionamento por fotocélula e baixo consumo de recursos. Lava lateral, teto e traseira do veículo, com produtividade de até 30 veículos por hora, mas não realiza a lavagem da parte frontal.</p>`;
+            img = '';
+            break;
+
+        case 15:
+            tittle = 'New LCM';
+            txt = `<p>O LCM é um equipamento móvel semiautomático para lavagem de ônibus e caminhões, com versões de 3 ou 5 escovas. Possui estrutura zincada a calor, controle remoto, automação por PLC e sistema de tração com inversor de frequência. Oferece fácil manutenção, alta durabilidade e eficiência, com produtividade de 3 a 7 veículos por hora. Conta com baixo consumo de recursos, sistema de alta pressão opcional e pista de lavagem customizável, sendo compatível com todos os modelos de veículos.</p>`;
+            img = '';
+            break;
     }
 
     document.getElementById('txtTitulo').textContent = tittle;
     document.getElementById('txtModal').innerHTML = txt;
+}
+
+function abrirLinksNRs(numeroNR){
+    let link;
+    switch(numeroNR){
+        case 5:
+            link = 'https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/normas-regulamentadora/normas-regulamentadoras-vigentes/NR05atualizada2023.pdf';
+            break;
+        
+        case 6:
+            link = 'https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/normas-regulamentadora/normas-regulamentadoras-vigentes/nr-06-atualizada-2025.pdf';
+            break;
+
+        case 10:
+            link = 'https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/arquivos/normas-regulamentadoras/nr-10.pdf';
+            break;
+
+        case 1010:
+            link = 'https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/arquivos/normas-regulamentadoras/nr-10.pdf';
+            break;
+                    
+        case 11:
+            link = 'https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/normas-regulamentadora/normas-regulamentadoras-vigentes/nr-11-atualizada-2016.pdf';
+            break;
+
+        case 12:
+            link = 'https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/normas-regulamentadora/normas-regulamentadoras-vigentes/nr-12-atualizada-2025.pdf';
+            break;
+
+        case 18:
+            link = 'https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/normas-regulamentadora/normas-regulamentadoras-vigentes/nr-18-atualizada-2025-1.pdf';
+            break;
+
+        case 20:
+            link = 'https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/normas-regulamentadora/normas-regulamentadoras-vigentes/nr-20-atualizada-2025.pdf';
+            break;
+
+        case 33:
+            link = 'https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/arquivos/normas-regulamentadoras/nr-33-atualizada-2022-_retificada.pdf';
+            break;
+
+        case 35:
+            link = 'https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/arquivos/normas-regulamentadoras/NR35atualizada2023.pdf';
+            break;
+    }
+
+    window.open(link,'_blank');
 }
