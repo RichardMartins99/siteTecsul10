@@ -19,6 +19,9 @@
 				</nav>
 			</div>
 
+			<!-- Toastr -->
+			<div id="toast-container"></div>
+
 			<!-- Modal -->
 			<div id="meuModal" class="modal">
 				<div class="modal-conteudo">
@@ -565,45 +568,70 @@
 			<!-- Footer -->
 				<div id="footer">
 					<div class="container">
-						<div class="row">
-							<div class="col-12">
-
-								<!-- Contact -->
-									<section class="contact">
-										<h2>Fale com a gente</h2>
-
-										<form id="form-contato">
-										  <label for="from_name" style="color: white;">Seu nome:</label>
-										  <input type="text" name="from_name" required>
-									  
-										  <label for="from_email" style="color: white;">Seu e-mail:</label>
-										  <input type="email" name="from_email" required>
-									  
-										  <label for="message" style="color: white;">Mensagem:</label>
-										  <textarea name="message" rows="5" required></textarea>
-									  
-										  <button type="submit">Enviar</button>
+						<section class="contact">
+							<h2>Sobre nós</h2>
+							<div class="tecsul-container">
+								<div class="tecsul-main">
+									<div class="tecsul-section">
+									<ul>
+										<li>Em 1996, a TECSul 10 iniciou suas atividades com equipamentos na cidade de Porto Alegre, RS – Brasil, no setor de Car Wash, atuando com montagens, instalações e assistência técnica autorizada Ceccato.</li>
+										<li>Em 2004, passou a atuar também na área comercial de vendas e pós-vendas na cidade de Porto Alegre, RS – Brasil, com equipamentos voltados para postos de abastecimento e Car Wash.</li>
+										<li>Em 2021, expandiu suas atividades comerciais de vendas e pós-vendas de equipamentos na área de Car Wash Ceccato, atendendo a região Sul do Brasil (Estado do RS) e países do Mercosul: Brasil, Argentina, Paraguai e Uruguai.</li>
+										<li>Em 2021, também iniciou atividades na área de Segurança do Trabalho (SST), com treinamentos em normas regulamentadoras (NRs), teóricos e práticos, atendendo os estados do PR, SC e RS, na região Sul do Brasil.</li>
+										<li>Em 2025, passou a atuar na área comercial de vendas e pós-vendas de equipamentos na linha de produtos ambientais com a Alfamec, atendendo os estados do PR, SC e RS, na região Sul do Brasil.</li>
+									</ul>
+								</div>
+								
+									<div class="tecsul-section">
+									<h3 style="color: #333;text-align: center;padding-bottom: 40px;">Oferecemos aos clientes experiência em vendas, montagens e treinamentos</h2>
+									<ul>
+										<li>Contribuímos com consultoria para a escolha do equipamento mais adequado ao layout da sua empresa, prezando pelo custo-benefício, e orientamos empreiteiros na leitura das plantas orientativas para construção da infraestrutura necessária aos equipamentos.</li>
+										<li>Na implantação, oferecemos nossa experiência em montagem e instalação adequada dos equipamentos, além do pós-venda, com garantia de peças e mão de obra conforme os manuais dos fabricantes.</li>
+										<li>Realizamos treinamentos no start dos equipamentos, instruindo os operadores no uso correto e na manutenção básica, aumentando a vida útil e o desempenho dos equipamentos.</li>
+										<li>Contamos com equipe técnica treinada e atualizada pelos fabricantes, além de veículos próprios de assistência técnica com kits de peças para pronto atendimento em equipamentos na garantia e no pós-venda, com contratos de manutenção preventiva.</li>
+										<li>Nossos instrutores na área de Segurança do Trabalho (SST) são profissionais qualificados: bombeiro civil, engenheiro de segurança do trabalho, técnico em segurança do trabalho e técnico em eletrotécnica.</li>
+									</ul>
+									</div>
+								</div>
+									
+							</div>
+							<div class="row">
+								<div class="col-12">
+									<!-- Contact -->
+									<h2>Fale com a gente</h2>
+										<form id="form-contato" autocomplete="off">
+												<div class="row">
+													<div class="col-6">
+														<label for="from_name">Nome *</label>
+														<input type="text" name="from_name" id="from_name" required>
+													</div>
+													<div class="col-6">
+														<label for="from_email">E-mail *</label>
+														<input type="email" name="from_email" id="from_email" required>
+													</div>
+												</div>
+										
+											<label for="message">Como podemos ajudar? *</label>
+											<textarea name="message" id="message" rows="5" style="min-width: 540px;max-width: 540px; max-height: 150px;" required></textarea>
+										
+											<button type="submit">Enviar</button>
 										</form>
-
-										<header>
-											<h3>Nisl turpis nascetur interdum?</h3>
-										</header>
-										<p>Urna nisl non quis interdum mus ornare ridiculus egestas ridiculus lobortis vivamus tempor aliquet.</p>
-										<ul class="icons">
-											<li><a href="https://www.facebook.com/TECSul10Autorizado" class="icon brands fa-facebook-f" target="_blank"><span class="label">Facebook</span></a></li>
-										</ul>
-									</section>
-
-								<!-- Copyright -->
+								</div>
+							</div>
+							<div class="row">
+								<div style="margin-top: 50px;" class="col-12">
+									<ul class="icons">
+										<li><a href="https://www.facebook.com/TECSul10Autorizado" class="icon brands fa-facebook-f" target="_blank"><span class="label">Facebook</span></a></li>
+									</ul>
+									<!-- Copyright -->
 									<div class="copyright">
 										<ul class="menu">
-											<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="">___</a></li>
+											<li>&copy; TECSul 10. All rights reserved.</li>
 										</ul>
 									</div>
-
+								</div>
 							</div>
-
-						</div>
+						</section>
 					</div>
 				</div>
 
@@ -632,11 +660,11 @@
 
 				emailjs.sendForm("service_6pwqb9e", "template_58uh56s", this)
 					.then(function() {
-					alert("Mensagem enviada com sucesso!"); //Criar um toastr para mensagem
+						showToast("Mensagem enviada com sucesso!"); //Criar um toastr para mensagem
 					form.reset();
 					}, function(error) {
 					console.error("Erro:", error);
-					alert("Ocorreu um erro. Tente novamente.");
+						showToast("Ocorreu um erro. Tente novamente.", 'error');
 					});
 				});
 			</script>
