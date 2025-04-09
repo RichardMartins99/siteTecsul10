@@ -2734,6 +2734,15 @@ form {
 					color: rgba(212, 212, 212, 0.85);
 				}
 
+/* Botao Whatsapp */
+.btn-wpp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+	z-index: 1000;
+}
+
+
 /* Carousel */
 
 	.carousel {
@@ -3204,8 +3213,7 @@ form {
 					left: 0;
 					top: 0;
 					width: 100%;
-					height: 100%;
-					background: url("images/overlay.png");
+					height: 100%;			
 					background-size: 128px 128px;
 				}
 
