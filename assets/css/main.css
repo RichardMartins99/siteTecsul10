@@ -1942,6 +1942,10 @@ input, select, textarea {
 					color: #ef8376;
 				}
 
+ .mt-40 {
+	margin-top: 40px;
+ }
+
 /* Form */
 
 	form label {
