@@ -1,4 +1,7 @@
 (function($) {
+	var autoScrollId = null;
+	var carouselDuration = 40; // ← Mude este número para ajustar a velocidade
+	var pixelsPerInterval = 1;
 
 	var	$window = $(window),
 		$body = $('body'),
@@ -73,6 +76,7 @@
 		$('.carousel').each(function() {
 
 			var	$t = $(this),
+				$forward = $('<span class="forward"></span>'),
 				$backward = $('<span class="backward"></span>'),
 				$reel = $t.children('.reel'),
 				$items = $reel.children('article');
@@ -128,50 +132,101 @@
 
 				$t._updatePos = function() { $reel.css('transform', 'translate(' + pos + 'px, 0)'); };
 
+			// Forward.
+				$forward.remove();
+
+				function iniciarAutoScroll() {
+					if (autoScrollId) return;
+				
+					autoScrollId = window.setInterval(function() {
+						pos -= pixelsPerInterval;
+				
+						if (Math.abs(pos) >= reelWidth / 2) {
+							pos = 0;
+						}
+				
+						$t._updatePos();
+					}, 10);
+				}
+				
+				
+				function pararAutoScroll() {
+					if (autoScrollId) {
+						window.clearInterval(autoScrollId);
+						autoScrollId = null;
+					}
+				}
+				
+				$t[0]._iniciarAutoScroll = iniciarAutoScroll;
+				$t[0]._pararAutoScroll = pararAutoScroll;
+
 			// Backward.
-				$backward
-					.appendTo($t)
-					.hide()
-					.mouseenter(function(e) {
-						timerId = window.setInterval(function() {
-							pos += settings.carousels.speed;
-
-							if (pos >= leftLimit) {
-
-								window.clearInterval(timerId);
-								pos = leftLimit;
-
-							}
-
-							$t._updatePos();
-						}, 10);
-					})
-					.mouseleave(function(e) {
+			$backward
+			.appendTo($t)
+			.hide()
+			.mouseenter(function(e) {
+				pararAutoScroll(); // <--- para o scroll automático
+		
+				timerId = window.setInterval(function() {
+					pos += settings.carousels.speed;
+		
+					if (pos >= leftLimit) {
 						window.clearInterval(timerId);
-					});
+						pos = leftLimit;
+					}
+		
+					$t._updatePos();
+				}, 10);
+			})
+			.mouseleave(function(e) {
+				window.clearInterval(timerId);
+		
+				// Opcional: retomar auto scroll depois que sair do botão
+				iniciarAutoScroll();
+			});
+		
+			$t.on('mouseenter touchstart', function(e) {
+				pararAutoScroll();
+				timerId = window.setInterval(function() {
+					pos += settings.carousels.speed;
+					if (pos >= leftLimit) {
+						window.clearInterval(timerId);
+						pos = leftLimit;
+					}
+					$t._updatePos();
+				}, 10);
+				e.preventDefault();
+			})
+			$t.on('mouseleave touchend touchcancel', function(e) {
+				window.clearInterval(timerId);
+				iniciarAutoScroll();
+				e.preventDefault();
+			});
+			
+			$reel.on('touchstart', function() {
+				pararAutoScroll();
+			});
+			$reel.on('touchend touchcancel', function() {
+				iniciarAutoScroll();
+			});
+			
+			
 
 			// Init.
 				$window.on('load', function() {
 
 					reelWidth = $reel[0].scrollWidth;
 
-					if (browser.mobile) {
+					// Cálculo da velocidade em px por intervalo de 10ms
+					pixelsPerInterval = reelWidth / (carouselDuration * 100); // 100 * 10ms = 1s
 
-						$reel
-							.css('overflow-y', 'hidden')
-							.css('overflow-x', 'scroll')
-							.scrollLeft(0);
-						$backward.hide();
 
-					}
-					else {
+					$reel
+						.css('overflow', 'visible')
+						.scrollLeft(0);
+					$backward.show();
+					iniciarAutoScroll();
 
-						$reel
-							.css('overflow', 'visible')
-							.scrollLeft(0);
-						$backward.show();
-
-					}
 
 					$t._update();
 

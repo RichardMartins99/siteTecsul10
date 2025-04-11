@@ -2,12 +2,10 @@ let isModalOpen = false;
 document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById("meuModal");
     const spanFechar = document.getElementsByClassName("fechar")[0];
-    const reels = document.querySelectorAll(".carousel .reel");
 
     function fecharModal() {
         isModalOpen = false;
         modal.style.display = "none";
-        reels.forEach(reel => reel.style.animationPlayState = "running");
     }
 
     spanFechar.onclick = fecharModal;
@@ -24,46 +22,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    reels.forEach(reel => {
-        reel.addEventListener("mouseenter", () => {
-            if (!isModalOpen) {
-                reel.style.animationPlayState = "paused";
-            }
-        });
-    
-        reel.addEventListener("mouseleave", () => {
-            if (!isModalOpen) {
-                reel.style.animationPlayState = "running";
-            }
-        });
-    });
-
-    document.querySelectorAll(".carousel").forEach(ajustarDuracao);
-
-    //Email js
-    
 });
 
-function ajustarDuracao(carousel) {
-    const reel = carousel.querySelector(".reel");
-    const larguraReel = reel.scrollWidth; // Pega a largura total do reel
-    const duracaoBase = 2; // Tempo base para um carrossel de referência
-    const larguraPadrao = 400; // Tamanho base do primeiro carrossel
-
-    // Ajusta a duração proporcionalmente ao tamanho
-    const novaDuracao = (larguraReel / larguraPadrao) * duracaoBase;
-
-    // Aplica a nova duração na animação
-    reel.style.animationDuration = `${novaDuracao}s`;
-}
 
 function abrirModal(idModal){
     isModalOpen = true;
     const modal = document.getElementById("meuModal");
-    const reels = document.querySelectorAll(".carousel .reel");
     modal.style.display = "block";
-
-    reels.forEach(reel => reel.style.animationPlayState = "paused");
 
     configModal(idModal);
 }
