@@ -185,31 +185,16 @@
 				iniciarAutoScroll();
 			});
 		
-			$t.on('mouseenter touchstart', function(e) {
-				pararAutoScroll();
-				timerId = window.setInterval(function() {
-					pos += settings.carousels.speed;
-					if (pos >= leftLimit) {
-						window.clearInterval(timerId);
-						pos = leftLimit;
-					}
-					$t._updatePos();
-				}, 10);
-				e.preventDefault();
-			})
-			$t.on('mouseleave touchend touchcancel', function(e) {
-				window.clearInterval(timerId);
-				iniciarAutoScroll();
-				e.preventDefault();
+			$t.on('mouseover', function(e) {
+				// Pausa se o mouse estiver em qualquer parte da carousel (inclusive .backward)
+				if ($t.has(e.target).length > 0 || $t.is(e.target)) {
+					pararAutoScroll();
+				}
 			});
 			
-			$reel.on('touchstart', function() {
-				pararAutoScroll();
-			});
-			$reel.on('touchend touchcancel', function() {
+			$t.on('mouseleave', function(e) {
 				iniciarAutoScroll();
 			});
-			
 			
 
 			// Init.
@@ -221,12 +206,35 @@
 					pixelsPerInterval = reelWidth / (carouselDuration * 100); // 100 * 10ms = 1s
 
 
-					$reel
-						.css('overflow', 'visible')
-						.scrollLeft(0);
-					$backward.show();
-					iniciarAutoScroll();
+					if (browser.mobile) {
+						// Remove os elementos duplicados (segunda metade dos artigos)
+						let totalArticles = $items.length;
+						let metade = totalArticles / 2;
+					
+						$items.each(function(index) {
+							if (index >= metade) {
+								$(this).remove();
+							}
+						});
+					
+						// Atualiza a referência dos itens após remoção
+						$items = $reel.children('article');
+					
+						$reel
+							.css('overflow-y', 'hidden')
+							.css('overflow-x', 'scroll')
+							.scrollLeft(0);
+						$backward.hide();
+					}
+					
+					else {
 
+						$reel
+							.css('overflow', 'visible')
+							.scrollLeft(0);
+						$backward.show();
+						iniciarAutoScroll();
+					}
 
 					$t._update();
 
