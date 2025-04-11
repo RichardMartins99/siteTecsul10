@@ -2949,17 +2949,18 @@ form {
 						transform: scaleX(-1);
 					}
 		
-				.carousel .reel {
-					white-space: nowrap;
-					position: relative;
-					-webkit-overflow-scrolling: touch;
-					padding: 0 2em 0 2em;
-				}
-		
+					.carousel .reel {
+						white-space: nowrap;
+						position: relative;
+						-webkit-overflow-scrolling: touch;
+						padding: 0 2em 0 2em;
+					}
+					
 				.carousel article {
-					display: inline-block;
 					width: 18em;
 					background: #fff;
+					box-shadow: -2px 2px 10px rgba(80, 72, 72, 0.212);
+					border-radius: 2%;
 					text-align: center;
 					padding: 0 1em 3em 1em;
 					margin: 0 2em 0 0;
@@ -2968,7 +2969,10 @@ form {
 					-moz-transition: opacity 0.75s ease-in-out;
 					-webkit-transition: opacity 0.75s ease-in-out;
 					-ms-transition: opacity 0.75s ease-in-out;
-					transition: opacity 0.75s ease-in-out;
+					transition: opacity 0.75s ease-in-out;			
+					height: 30em;
+					overflow: hidden;
+					display: inline-block;
 				}
 		
 					.carousel article.loading {
@@ -2988,6 +2992,9 @@ form {
 						text-align: center;
 					}
 
+					.mt-tratamento {
+						margin-top: 40px;
+					}
 /* Wide */
 
 	@media screen and (max-width: 1680px) {
@@ -3306,5 +3313,9 @@ form {
 
 					.mt-40 {
 						margin-top: 80px;
+					}
+
+					.mt-tratamento {
+						margin-top: 60px;
 					}
 	}
