@@ -1946,6 +1946,10 @@ input, select, textarea {
 	margin-top: 40px;
  }
 
+ .mt-85 {
+	margin-top: 85px;
+ }
+
  .mt-10 {
 	margin-top: 10px;
 
@@ -2755,131 +2759,7 @@ form {
 
 
 /* Carousel */
-
-	/* .carousel {
-		position: relative;
-		overflow: hidden;
-		padding: 2em 0 2em 0;
-		margin-bottom: 0;
-	}
-
-		.carousel .backward {
-			position: absolute;
-			top: 50%;
-			width: 6em;
-			height: 12em;
-			margin-top: -6em;
-			cursor: pointer;
-		}
-
-			.carousel .backward:before {
-				content: '';
-				display: block;
-				width: 6em;
-				height: 6em;
-				border-radius: 100%;
-				background-color: rgba(72, 57, 73, 0.5);
-				position: absolute;
-				top: 50%;
-				margin-top: -3em;
-				-moz-transition: background-color 0.35s ease-in-out;
-				-webkit-transition: background-color 0.35s ease-in-out;
-				-o-transition: background-color 0.35s ease-in-out;
-				-ms-transition: background-color 0.35s ease-in-out;
-				transition: background-color 0.35s ease-in-out;
-				-webkit-backface-visibility: hidden;
-			}
-
-			.carousel .backward:after {
-				content: '';
-				width: 3em;
-				height: 3em;
-				position: absolute;
-				top: 50%;
-				margin: -1.5em 0 0 0;
-				background: url("images/arrow.svg") no-repeat center center;
-			}
-
-			.carousel .backward:hover:before {
-				background-color: #84b6f4;
-			}
-
-		.carousel .backward {
-			left: 0;
-		}
-
-			.carousel .backward:before {
-				left: -3em;
-			}
-
-			.carousel .backward:after {
-				left: -0.25em;
-				-moz-transform: scaleX(-1);
-				-webkit-transform: scaleX(-1);
-				-ms-transform: scaleX(-1);
-				transform: scaleX(-1);
-			}
-
-			.carousel .reel {
-				display: flex;
-				width: max-content;
-				animation: scroll 10s linear infinite;
-				animation-delay: 3s;
-			}
-
-		.carousel article {
-			width: 18em;
-			background: #fff;
-			box-shadow: -2px 2px 10px rgba(80, 72, 72, 0.212);
-			border-radius: 2%;
-			text-align: center;
-			padding: 0 1em 3em 1em;
-			margin: 0 2em 0 0;
-			white-space: normal;
-			opacity: 1.0;
-			-moz-transition: opacity 0.75s ease-in-out;
-			-webkit-transition: opacity 0.75s ease-in-out;
-			-ms-transition: opacity 0.75s ease-in-out;
-			transition: opacity 0.75s ease-in-out;			
-			height: 30em;
-			overflow: hidden;
-			display: inline-block;
-		}
-
-			.carousel article.loading {
-				opacity: 0;
-			}
-
-			.carousel article .image {
-				position: relative;
-				left: -1em;
-				top: 0;
-				width: auto;
-				margin-right: -2em;
-				margin-bottom: 3em;
-			}
-
-			.carousel article p {
-				text-align: center;
-				height: 1.5em;
-				line-height: 1.5em;
-				margin: 0;
-			}
-
-			.carousel article a {
-				cursor: pointer;
-			}
-
-			@keyframes scroll {
-				from {
-				  transform: translateX(0);
-				}
-				to {
-				  transform: translateX(-50%);
-				}
-			  }
-			 */
-
+	
 			 .carousel {
 				position: relative;
 				overflow: hidden;
@@ -2998,10 +2878,7 @@ form {
 					.carousel article p {
 						text-align: center;
 					}
-
-					.mt-tratamento {
-						margin-top: 40px;
-					}
+					
 /* Wide */
 
 	@media screen and (max-width: 1680px) {
