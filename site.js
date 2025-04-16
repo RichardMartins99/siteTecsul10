@@ -40,7 +40,7 @@ function configModal(idModal){
         //Soluções ambientais
         case 0:
             tittle = 'Aeradores superficiais';
-            txt = `<p> O aerador de alta rotação funciona de maneira inversa aos aeradores convencionais, impulsionando o ar para dentro da água em vez de dispersá-lo na atmosfera.</p>
+            txt = `<p> O aerador de alta rotação funciona de forma inversa aos aeradores convencionais, impulsionando o ar para dentro da água, em vez de dispersá-lo na atmosfera.</p>
                    <p>Seu funcionamento é baseado em uma hélice propulsora acionada por um motor elétrico, que gera vácuo em sua extremidade. Esse vácuo permite a entrada de ar através de um eixo tubular, promovendo a oxigenação da água de forma eficiente.</p>`;
             img = '';
             break;
@@ -48,7 +48,8 @@ function configModal(idModal){
         case 1:
             tittle = 'Tratamento de esgoto sanitário';
             txt = `<p>A estação de tratamento de esgoto sanitário segue todas as normas ambientais brasileiras, garantindo um efluente tratado de qualidade. Utiliza o processo aeróbio, que remove mais de 90% da DBO, sem gerar odores ou gases nocivos.</p>
-                 <p>O tratamento oferece benefícios como melhoria da saúde pública, conformidade com a legislação, preservação ambiental, valorização do imóvel e reutilização da água. O diferencial é a alta eficiência na remoção da DBO e a opção de um Painel de Controle Inteligente, que monitora a operação, gera relatórios e permite acompanhamento remoto para manutenção preventiva.</p>`;
+                  <p>O tratamento oferece benefícios como melhoria da saúde pública, conformidade com a legislação, preservação ambiental, valorização do imóvel e possibilidade de reutilização da água.</p>
+                  <p>Seu diferencial é a alta eficiência na remoção da DBO e a opção de um Painel de Controle Inteligente, que monitora a operação, gera relatórios e permite o acompanhamento remoto para manutenção preventiva.</p>`;
             img = '';
             break;
             
@@ -62,7 +63,7 @@ function configModal(idModal){
         case 3:
             tittle = 'Tratamento de efluentes';
             txt = `<p>O tratamento de efluentes envolve processos físicos, químicos e biológicos para remover poluentes antes do descarte ou reutilização. Desenvolvemos sistemas personalizados para tratar efluentes oleosos e químicos, garantindo eficiência, conformidade ambiental e suporte técnico.</p>
-                   <p>A <strong>Estação para Tratamento de Efluentes Oleosos (ETEO)</strong> trata resíduos industriais e automotivos contendo óleo, utilizando separadores de água, areia e óleo (S.A.A. S.A.O.) e uma Estação de Tratamento de Água (ETA). Suas vantagens incluem fácil instalação, baixo consumo energético e possibilidade de reutilização da água.</p>
+                   <p>A <strong>Estação para Tratamento de Efluentes Oleosos (ETEO)</strong> trata resíduos industriais e automotivos contendo óleo, utilizando separadores de água, areia e óleo (S.A.A. e S.A.O.), além de uma Estação de Tratamento de Água (ETA). Suas vantagens incluem fácil instalação, baixo consumo energético e possibilidade de reutilização da água.</p>
                    <p>A <strong>Estação para Tratamento de Efluentes Químicos (ETEQ)</strong> processa resíduos industriais com separadores de areia mecanizados (SAM), decantadores tubulares e filtros de carvão. O sistema realiza um tratamento primário seguido de um processo físico-químico, tornando a água apta para reuso ou descarte controlado.</p>`;
             img = '';
             break;
@@ -103,7 +104,7 @@ function configModal(idModal){
         //Máquinas de lavagem automotiva
         case 6:
             tittle = 'Aries WD 240';
-            txt = `<p> O Aries WD 240 é uma solução de ótimo custo-benefício para lavagem de veículos, ideal para concessionárias, postos e locais com demanda por serviços de qualidade. É um equipamento de baixo investimento, alta rentabilidade e fácil uso e manutenção, projetado para alta demanda. Suas escovas de EVA proporcionam maciez e brilho, e o sistema oferece flexibilidade de configuração e baixo custo operacional. Pode ser equipado com diversos acessórios, adaptando-se às necessidades do cliente.
+            txt = `<p> O Aries WD 240 é uma solução de ótimo custo-benefício para lavagem de veículos, ideal para concessionárias, postos e locais com alta demanda por serviços de qualidade. É um equipamento de baixo investimento, alta rentabilidade, fácil uso e manutenção, projetado para grandes volumes de serviço. Suas escovas de EVA proporcionam maciez e brilho, e o sistema oferece flexibilidade de configuração, além de baixo custo operacional. Pode ser equipado com diversos acessórios, adaptando-se às necessidades do cliente.
                     </p>
                     <h4><strong>Materiais Filtrantes:</strong></h4>  
                     <ul>
@@ -111,7 +112,7 @@ function configModal(idModal){
                         <li><strong>Potência instalada:</strong> de 7,5 kW (básico) até 12,8 kW (completo)</li>
                         <li><strong>Consumo de água por ciclo: </strong>  90 a 120 litros</li>
                         <li><strong>Consumo de shampoo/cera por lavagem:</strong>  30-40 ml / 50-60 ml</li>
-                        <li><strong>Tempo de lavagem:</strong>  aprox. 2 min e 15 s</li>
+                        <li><strong>Tempo de lavagem:</strong>  Tempo de lavagem: aproximadamente 2 min e 15 s</li>
                     </ul>
                     <p>Oferece alta confiabilidade e uma excelente relação qualidade/preço.</p>`;
             img = '';

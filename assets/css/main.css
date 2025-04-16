@@ -1946,6 +1946,13 @@ input, select, textarea {
 	margin-top: 40px;
  }
 
+ .mt-10 {
+	margin-top: 10px;
+
+ }.mt-30 {
+	margin-top: 10px;
+ }
+
 /* Form */
 
 	form label {
@@ -3311,11 +3318,23 @@ form {
 						margin-bottom: 2em;
 					}
 
-					.mt-40 {
-						margin-top: 80px;
+					.mt-28{
+						margin-top: 28px;
 					}
 
-					.mt-tratamento {
+					.mt-53{
+						margin-top: 53px;
+					}
+
+					.mt-58{
+						margin-top: 58px;
+					}
+
+					.mt-60 {
 						margin-top: 60px;
+					}
+
+					.mt-80 {
+						margin-top: 80px;
 					}
 	}

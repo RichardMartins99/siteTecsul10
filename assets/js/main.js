@@ -157,8 +157,7 @@
 					}
 				}
 				
-				$t[0]._iniciarAutoScroll = iniciarAutoScroll;
-				$t[0]._pararAutoScroll = pararAutoScroll;
+				
 
 			// Backward.
 			$backward
@@ -233,7 +232,7 @@
 							.css('overflow', 'visible')
 							.scrollLeft(0);
 						$backward.show();
-						iniciarAutoScroll();
+						setTimeout(iniciarAutoScroll, 3000);
 					}
 
 					$t._update();
