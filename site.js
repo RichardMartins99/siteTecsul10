@@ -126,7 +126,7 @@ function configModal(idModal){
 
         case 8:
             tittle = 'Taurus';
-            txt = `<p>Taurus oferece a melhor relação custo-benefício, unindo robustez, tecnologia nacional e eficiência operacional com baixo consumo de energia. Possui alta conectividade via PLC com 7 inversores e até 12 programas de lavagem configuráveis. É um equipamento versátil, com opcionais como secadores laterais, lava rodas, robowash e bomba HP onboard. Destaca-se pela alta rentabilidade, baixo consumo de recursos e capacidade de aplicar até 4 tipos de produtos.</p>`;
+            txt = `<p>Taurus oferece a melhor relação custo-benefício, unindo robustez, tecnologia nacional e eficiência operacional com baixo consumo de energia. Possui alta conectividade via PLC com 7 inversores e até 6 programas de lavagem configuráveis. É um equipamento versátil, com opcionais como secadores laterais, lava rodas, robowash e bomba HP onboard. Destaca-se pela alta rentabilidade, baixo consumo de recursos e capacidade de aplicar até 4 tipos de produtos.</p>`;
             img = '';
             break;
 
